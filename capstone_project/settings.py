@@ -1,3 +1,4 @@
+import os
 """
 Django settings for capstone_project project.
 
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main_app/'
+    'main_app'
 ]
 
 MIDDLEWARE = [
