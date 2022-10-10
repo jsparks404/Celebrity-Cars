@@ -19,7 +19,7 @@ class Car(models.Model):
     make = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
     trim = models.CharField(max_length=100, default='#')
-    celebrity = models.ForeignKey(Celebrity, on_delete=models.CASCADE, related_names="cars")
+    celebrity = models.ForeignKey(Celebrity, on_delete=models.CASCADE, related_name="cars")
 
     def __str__(self):
         return self.model
