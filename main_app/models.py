@@ -19,21 +19,18 @@ class Car(models.Model):
     make = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
     trim = models.CharField(max_length=100, default='#')
-    celebrity = models.ForeignKey(Celebrity, on_delete=models.CASCADE, related_name="cars")
-
-    def __str__(self):
-        return self.model
-    
-
-class Engine(models.Model):
     displacement = models.CharField(max_length=100)
     induction = models.CharField(max_length=100)
     configuration = models.CharField(max_length=100)
     hp = models.CharField(max_length=100)
     torque = models.CharField(max_length=100)
-    car = models.ForeignKey(Car, on_delete=models.CASCADE, related_name="engine")
+    celebrity = models.ForeignKey(Celebrity, on_delete=models.CASCADE, related_name="cars")
+    img = models.CharField(max_length=500)
 
     def __str__(self):
-        return self.displacement
+        return self.model
+    
+
+
     
     
