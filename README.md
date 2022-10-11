@@ -21,3 +21,8 @@ arnold schwarzeneggar
 
 
 -make sure everything shows up on pages. create celebrity page, create celebrity car page.
+
+
+
+-make create, update, and delete pages. 
+ - celebrity create and delete, car create and delete, car specs update

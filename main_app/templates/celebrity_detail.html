@@ -16,14 +16,14 @@
             <img class="car_pic" src={{car.img}} alt={{car.name}} />
             <div class="car_list_title">
                 {% if car.year != '.' %}
-                <span>{{car.year}}  </span>
+                <span class="space">{{car.year}} </span>
                 {% endif %}
-                <span>{{car.make}} </span>
+                <span class="space">{{car.make}}</span>
                 {% if car.model != '.' %}
-                <span>{{car.model}} </span>
+                <span class="space">{{car.model}}</span>
                 {% endif %}
                 {% if car.trim != '.' %}
-                <span>{{car.trim}}</span>
+                <span class="space">{{car.trim}}</span>
                 {% endif %}
             </div>
         </div>
