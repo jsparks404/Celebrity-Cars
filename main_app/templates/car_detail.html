@@ -3,36 +3,39 @@
 
 
 <div class="car">
-    
-    <img class="car_img" src={{car.img}} alt={{car.name}} />
-    <div class="car_title">
-        {%if car.year != '.'%}
-        <h2>{{car.year}}</h2>
-        {% endif %}
-        <h2>{{car.make}}</h2>
-        {%if car.model != '.'%}
-        <h2>{{car.model}}</h2>
-        {% endif %}
-        {%if car.trim != '.'%}
-        <h2>{{car.trim}}</h2>
-        {% endif %}
+    <div class="car_info">
+        <img class="car_img" src={{car.img}} alt={{car.name}} />
     </div>
-    <div class="car_specs">
-        {% if car.displacement != '.' %}
-        <p>Displacement: {{car.displacement}}</p>
-        {% endif %}
-        {% if car.induction != '.' %}
-        <p>Induction: {{car.induction}}</p>
-        {% endif %}
-        {% if car.configuration != '.' %}
-        <p>Configuration: {{car.configuration}}</p>
-        {% endif %}
-        {% if car.hp != '.' %}
-        <p>Horsepower: {{car.hp}}</p>
-        {% endif %}
-        {% if car.torque != '.' %}
-        <p>Torque: {{car.torque}}</p>
-        {% endif %}
+    <div class="car_info">
+        <div class="car_title">
+            {%if car.year != '.'%}
+            <span>{{car.year}}</span>
+            {% endif %}
+            <span>{{car.make}}</span>
+            {%if car.model != '.'%}
+            <span>{{car.model}}</span>
+            {% endif %}
+            {%if car.trim != '.'%}
+            <span>{{car.trim}}</span>
+            {% endif %}
+        </div>
+        <div class="car_specs">
+            {% if car.displacement != '.' %}
+            <p>Displacement: {{car.displacement}}</p>
+            {% endif %}
+            {% if car.induction != '.' %}
+            <p>Induction: {{car.induction}}</p>
+            {% endif %}
+            {% if car.configuration != '.' %}
+            <p>Configuration: {{car.configuration}}</p>
+            {% endif %}
+            {% if car.hp != '.' %}
+            <p>Horsepower: {{car.hp}}</p>
+            {% endif %}
+            {% if car.torque != '.' %}
+            <p>Torque: {{car.torque}}</p>
+            {% endif %}
+        </div>
     </div>
     
 </div>

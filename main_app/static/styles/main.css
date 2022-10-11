@@ -3,6 +3,9 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
 
 .title {
     text-align: center;
@@ -37,14 +40,66 @@ body {
 
 
 
-.detail_pic {
-    max-width: 300px;
+.celeb_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
 }
 
-.car_img {
-    max-width: 700px;
+.celeb_info {
+    
+}
+
+
+
+.detail_pic {
+    max-width: 300px;
+    border-radius: 20px;
+    border: 5px solid black;
+    margin-bottom: 30px;
+}
+
+.car_list{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.single_car {
+    text-align: center;
 }
 
 .car_pic {
     max-width: 300px;
+    border-radius: 10px;
+    border: 5px solid black;
+}
+
+.car_list_title {
+    display: flex;
+    color: white;
+    justify-content: center;
+
+}
+
+
+
+.car {
+   display: grid;
+   grid-template-columns: auto auto;
+   align-items: center;
+}
+
+.car_img {
+    max-width: 500px;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+
+.car_title {
+    font-size: 2em;
+    text-decoration: underline;
 }
