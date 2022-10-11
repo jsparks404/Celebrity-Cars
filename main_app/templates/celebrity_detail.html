@@ -4,15 +4,15 @@
     <img class="detail_pic" src={{celebrity.img}} alt={{celebrity.name}} />
     <h3>{{celebrity.name}}</h3>
     <div>
-        <h4>{{celebrity.dob}}</h4>
-        <h4>{{celebrity.job}}</h4>
+        <h4>Born on {{celebrity.dob}}</h4>
+        <h4>Profession: {{celebrity.job}}</h4>
     </div>
 </div>
 
 <div class="car_list">
     {% for car in celebrity.cars.all%}
     <a href="{% url 'car_detail' celebrity.pk car.pk %}">
-        <img class="car_img" src={{car.img}} alt={{car.name}} />
+        <img class="car_pic" src={{car.img}} alt={{car.name}} />
         <h4>{{car.make}} {{car.model}} {{car.trim}}</h4>
     </a>
     {% endfor %}
