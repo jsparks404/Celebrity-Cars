@@ -10,10 +10,10 @@ INSERT INTO main_app_celebrity(name, img, dob, job) VALUES ('Jeremy Clarkson', '
 INSERT INTO main_app_celebrity(name, img, dob, job) VALUES ('Lewis Hamilton', 'https://i.dawn.com/primary/2022/07/10193721ecb897e.jpg', '1/07/1985', 'Formula 1 Driver');
 INSERT INTO main_app_celebrity(name, img, dob, job) VALUES ('James Hetfield', 'https://nationaltoday.com/wp-content/uploads/2022/07/13-James-Hetfield-640x514.jpg', '8/03/1963', 'Musician');
 INSERT INTO main_app_celebrity(name, img, dob, job) VALUES ('Rowan Atkinson', 'https://www.onthisday.com/images/people/rowan-atkinson-medium.jpg', '1/06/1955', 'Actor');
-INSERT INTO main_app_celebrity(name, img, dob, job) VALUES ('Arnold Schwarzenegger', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg/640px-Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg', '7/30/1947', 'Actor')
+INSERT INTO main_app_celebrity(name, img, dob, job) VALUES ('Arnold Schwarzenegger', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg/640px-Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg', '7/30/1947', 'Actor');
 
 
--- Jay Leno 1
+Jay Leno 1
 INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('1986', 'Lamborghini', 'Countach', '.', '5.2L', 'Naturally Aspirated', 'V12', '455', '369 Lb-Ft', 1, 'https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_674,q_auto:eco,w_1200/cms/uploads/3FJsVkNTRGYsdU7gSp8c');
 INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('1909', 'Stanley Steamer', '.', '.', '.', '.', 'Steam Engine', '20', '.', 1, 'https://www.goldeagle.com/wp-content/uploads/2014/03/Jay-lenos-garage-1906_StanleySteamer_VanderbiltCupRacer-gallery-1-min-1280x720.png');
 INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('2017', 'Ford', 'GT', '.', '3.5L', 'Twin Turbo', 'V6', '650', '550 Lb-Ft', 1, 'https://cdn.motor1.com/images/mgl/K0L2q/s1/jay-leno-2017-ford-gt.jpg');
@@ -58,13 +58,11 @@ INSERT INTO main_app_car(year, make, model, trim, displacement, induction, confi
 INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('2002', 'Honda', 'NSX', '.', '3.2L', 'Naturally Aspirated', 'V6', '290', '224 Lb-Ft', 6, 'https://www.motorious.com/content/images/2020/02/Acura-NSX-2.jpg');
 INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('1977', 'Aston Martin', 'V8 Vantage', '.', '5.3L', 'Naturally Aspirated', 'V8', '390', '406 Lb-Ft', 6, 'https://media.gq-magazine.co.uk/photos/5f043b7cfcb5fd13a37e5c4e/master/w_1920,h_1280,c_limit/20200706-rowan-cars-12.jpg');
 
-
-
 -- Arnold Schwarzenegger 7
-INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES
-INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES
-INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES
-INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES
-INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES
-INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES
-INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES
+INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('.', 'Studebaker', 'Excalibur', '.', '.', 'Naturally Aspirated', 'V8', '290-300', '.', 7, 'https://autojosh.com/wp-content/uploads/2017/07/arnold-schwarzenneger-6.jpg');
+INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('.', 'Porsche', '911', 'Turbo Cabriolet', '3.6L', 'Twin Turbo', 'H6', '480', '502 Lb-Ft', 7, 'https://s1.cdn.autoevolution.com/images/news/arnold-s-latest-ride-a-not-so-green-porsche-14474_1.jpg');
+INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('2012', 'Mercedes', 'SLS', 'Roadster', '6.2L', 'Naturally Aspirated', 'V8', '563', '479 Lb-Ft', 7, 'https://i.dailymail.co.uk/i/pix/2013/03/27/article-2299780-18F16B65000005DC-359_634x286.jpg');
+INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('.', 'Bentley', 'Continental', 'GT Supersports', '6L', 'Twin Turbo', 'W12', '700', '750 Lb-Ft', 7, 'https://www4.pictures.zimbio.com/bg/Arnold+Schwarzenegger+out+3js4zTQ3lzVx.jpg');
+INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('2015', 'Bugatti', 'Veyron', 'Grand Sport Vitesse', '8l', 'Quad Turbo', 'W16', '1184', '1100 Lb-Ft', 7, 'https://s1.cdn.autoevolution.com/images/news/arnold-schwarzenegger-seen-driving-his-bugatti-veyron-photo-gallery-90847_1.jpg');
+INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('.', 'M47 Patton Tank', '.', '.', '29.4L', 'Naturally Aspirated', 'V12', '810', '1250-1440 Lb-Ft', 7, 'https://www.wearethemighty.com/app/uploads/legacy/assets.rbl.ms/20330776/origin.jpg');
+
