@@ -4,10 +4,38 @@ body {
 }
 
 
+.title {
+    text-align: center;
+}
+
+.celeb_list {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.gallery {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: .5em;
+}
+
+.celeb {
+    text-align: center;
+}
 
 .celeb_pic {
     max-width: 200px;
+    border-radius: 15px;
+    border: 5px solid black;
 }
+
+
 
 .detail_pic {
     max-width: 300px;
