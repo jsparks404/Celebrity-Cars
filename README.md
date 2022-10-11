@@ -14,6 +14,10 @@ lewis hamilton
 james hetfield
  - 1934 Packard, 1936 Auburn, 1937 Lincoln Zephyr, 1948 Jaguar, 56 Ford F100, 61 Lincoln Continental
 rowan atkinson
- - 1997 McLaren F1,  2011 Rolls Royce Phantom Drophead, 1939 BMW 328, 2002 Honda NSX, 1977 Aston Martin V8 Vantage 
+ - 1997 McLaren F1,  2011 Rolls Royce Phantom Drophead, 2002 Honda NSX, 1977 Aston Martin V8 Vantage 
 arnold schwarzeneggar
  - Excalibur, Porsche 911 Turbo, Audi R8, Mercedes SLS AMG Roadster, Bentley Continental GTC, Bugatti Veyron, M47 Patton Tank
+
+
+
+-make sure everything shows up on pages. create celebrity page, create celebrity car page.
