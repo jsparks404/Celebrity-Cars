@@ -8,7 +8,11 @@
         <h4>Profession: {{celebrity.job}}</h4>
     </div>
 </div>
-
+<div>
+    {% if celebrity.id > 7%}
+    <a href="{% url 'celebrity_delete' celebrity.pk %}" class="button-is-danger">Delete</a>
+    {% endif %}
+</div>
 <div class="car_list">
     {% for car in celebrity.cars.all%}
     <a href="{% url 'car_detail' celebrity.pk car.pk %}">
@@ -29,5 +33,107 @@
         </div>
     </a>
     {% endfor %}
+</div>
+<div>
+    <h2>Add Car</h2>
+    <p>If no info is available, put . in field</p>
+    <form class="mb-5" action="{% url 'car_create' celebrity.pk %}" method="post">
+        {% csrf_token %}
+        <div class="field has-addons">
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="year"
+                    placeholder="year"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="make"
+                    placeholder="make"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="model"
+                    placeholder="model"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="trim"
+                    placeholder="trim"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="displacement"
+                    placeholder="displacement"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="induction"
+                    placeholder="induction"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="configuration"
+                    placeholder="configuration"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="hp"
+                    placeholder="hp"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="torque"
+                    placeholder="torque"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input
+                    class="input"
+                    type="text"
+                    name="img"
+                    placeholder="image url"
+                    required
+                />
+            </div>
+            <div class="control">
+                <input class="button is-primary" type="submit" value="Add Car" />
+            </div>
+        </div>
+    </form>
 </div>
 {% endblock %}
