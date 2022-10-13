@@ -42,4 +42,7 @@
 <div>
     <a class="update_car_button" href="/cars/{{car.id}}/update/">Update Car</a>
 </div>
+<div>
+    <a class="delete_car_button" href="{% url 'car_delete' car.pk %}">Delete</a>
+</div>
 {% endblock %}
