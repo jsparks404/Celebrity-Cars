@@ -3,6 +3,19 @@ body {
     color: white;
 }
 
+.nav {
+    display: flex;
+    background-color: black;
+    height: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.celeb_link {
+    margin: 5px;
+    color: gray;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -52,12 +65,17 @@ a {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+
 }
 
 .celeb_info {
-    
+    font-size: 1.5em;
 }
 
+.name {
+    text-decoration: underline;
+    font-size: 2em;
+}
 
 
 .detail_pic {
@@ -78,6 +96,7 @@ a {
 
 .single_car {
     text-align: center;
+
 }
 
 .car_pic {
@@ -85,6 +104,7 @@ a {
     border-radius: 10px;
     border: 3px solid black;
     box-shadow: 3px 5px black;
+    margin-bottom: 10px;
 }
 
 .space {
@@ -124,5 +144,7 @@ a {
 }
 
 .update_car_button {
-    margin-top: 20px;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 20px 0 0 20px;
 }

@@ -68,8 +68,6 @@ class CarUpdate(UpdateView):
     model = Car
     fields = ['year', 'make', 'model', 'trim', 'displacement', 'induction', 'configuration', 'hp', 'torque']
     template_name = "car_update.html"
-    
-    # success_url = '/'
     def get_success_url(self):
         print(self.kwargs)
         return reverse('car_detail', kwargs={'pk': self.object.pk, 'car_pk': self.object.celebrity.pk})
