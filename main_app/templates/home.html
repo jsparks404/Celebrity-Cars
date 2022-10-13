@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="home">
+    <div class="home_list">
+        <div class="home_gallery">
+            {% for car in cars %}
+            <div class="home_cars">
+                <img class="home_pic" src={{car.img}} alt={{car.name}} />
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</div>
+{% endblock %}

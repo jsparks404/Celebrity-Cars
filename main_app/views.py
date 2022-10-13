@@ -8,13 +8,18 @@ from django.urls import reverse
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 # Create your views here.
+
+
 class Home(TemplateView):
     template_name = "home.html"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['cars'] = Car.objects.all()
+        return context
 
 
 class Celebrities(TemplateView):
     template_name = "celebrity_list.html"
-    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['celebrities'] = Celebrity.objects.all()
@@ -63,13 +68,15 @@ class CarCreate(View):
         torque = request.POST.get('torque')
         img = request.POST.get('img')
         celebrity = Celebrity.objects.get(pk=pk)
-        Car.objects.create(year=year, make=make, model=model, trim=trim, displacement=displacement, induction=induction, configuration=configuration, hp=hp, torque=torque, img=img, celebrity=celebrity)
+        Car.objects.create(year=year, make=make, model=model, trim=trim, displacement=displacement,
+                           induction=induction, configuration=configuration, hp=hp, torque=torque, img=img, celebrity=celebrity)
         return redirect('celebrity_detail', pk=pk)
 
-    
+
 class CarUpdate(UpdateView):
     model = Car
-    fields = ['year', 'make', 'model', 'trim', 'displacement', 'induction', 'configuration', 'hp', 'torque']
+    fields = ['year', 'make', 'model', 'trim', 'displacement',
+              'induction', 'configuration', 'hp', 'torque']
     template_name = "car_update.html"
     def get_success_url(self):
         print(self.kwargs)
