@@ -6,6 +6,8 @@ from django.views import View
 from django.views.generic import DetailView
 from django.urls import reverse
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
@@ -89,3 +91,19 @@ class CarDelete(DeleteView):
     def get_success_url(self):
         print(self.kwargs)
         return reverse('celebrity_detail', kwargs={'pk': self.object.celebrity.pk})
+
+
+class Signup(View):
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form": form}
+        return render(request, "registration/signup.html", context)
+    def post(self, request):
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("celebrity_list")
+        else:
+            context= {"form": form}
+            return render(request, "registration/signup.html", context)

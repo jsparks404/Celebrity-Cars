@@ -13,6 +13,14 @@
     <nav class="nav">
         <a class="home_link" href="/">Home</a>
         <a class="celeb_link" href="/celebrities/">Celebrity List</a>
+        {% if user.is_authenticated%}
+        <div class="login/out">
+            <a class="logout_button" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="signup_button" href="{% url 'signup' %}">Sign Up</a>
+            <a class="login_button" href="{% url 'login' %}">Login</a>
+        </div>
+        {% endif %}
     </nav>
     <div class="container">
         
