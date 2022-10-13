@@ -10,7 +10,7 @@
 </div>
 <div>
     {% if celebrity.id > 7%}
-    <a href="{% url 'celebrity_delete' celebrity.pk %}" class="button-is-danger">Delete</a>
+    <a class="celeb_delete" href="{% url 'celebrity_delete' celebrity.pk %}" class="button-is-danger"> Delete Celebrity </a>
     {% endif %}
 </div>
 <div class="car_list">

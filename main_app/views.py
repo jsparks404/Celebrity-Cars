@@ -8,9 +8,12 @@ from django.urls import reverse
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 # Create your views here.
-
 class Home(TemplateView):
     template_name = "home.html"
+
+
+class Celebrities(TemplateView):
+    template_name = "celebrity_list.html"
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -38,13 +41,13 @@ class CelebrityCreate(CreateView):
     model = Celebrity
     fields = ['name', 'img', 'dob', 'job']
     template_name = "celebrity_create.html"
-    success_url = "/"
+    success_url = "/celebrities/"
 
 
 class CelebrityDelete(DeleteView):
     model = Celebrity
     template_name = "celebrity_delete_confirmation.html"
-    success_url = "/"
+    success_url = "/celebrities/"
 
 
 class CarCreate(View):

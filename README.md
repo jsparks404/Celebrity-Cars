@@ -26,3 +26,5 @@ arnold schwarzeneggar
 
 -make create, update, and delete pages. 
  - celebrity create and delete, car create and delete, car specs update
+
+ -make homepage a list of all cars, user auth,
