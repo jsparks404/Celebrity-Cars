@@ -81,3 +81,11 @@ class CarUpdate(UpdateView):
     def get_success_url(self):
         print(self.kwargs)
         return reverse('car_detail', kwargs={'pk': self.object.pk, 'car_pk': self.object.celebrity.pk})
+
+
+class CarDelete(DeleteView):
+    model = Car
+    template_name = "car_delete_confirmation.html"
+    def get_success_url(self):
+        print(self.kwargs)
+        return reverse('celebrity_detail', kwargs={'pk': self.object.celebrity.pk})

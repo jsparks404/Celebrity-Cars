@@ -13,7 +13,7 @@ INSERT INTO main_app_celebrity(name, img, dob, job) VALUES ('Rowan Atkinson', 'h
 INSERT INTO main_app_celebrity(name, img, dob, job) VALUES ('Arnold Schwarzenegger', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg/640px-Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg', '7/30/1947', 'Actor');
 
 
-Jay Leno 1
+-- Jay Leno 1
 INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('1986', 'Lamborghini', 'Countach', '.', '5.2L', 'Naturally Aspirated', 'V12', '455', '369 Lb-Ft', 1, 'https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_674,q_auto:eco,w_1200/cms/uploads/3FJsVkNTRGYsdU7gSp8c');
 INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('1909', 'Stanley Steamer', '.', '.', '.', '.', 'Steam Engine', '20', '.', 1, 'https://www.goldeagle.com/wp-content/uploads/2014/03/Jay-lenos-garage-1906_StanleySteamer_VanderbiltCupRacer-gallery-1-min-1280x720.png');
 INSERT INTO main_app_car(year, make, model, trim, displacement, induction, configuration, hp, torque, celebrity_id, img) VALUES ('2017', 'Ford', 'GT', '.', '3.5L', 'Twin Turbo', 'V6', '650', '550 Lb-Ft', 1, 'https://cdn.motor1.com/images/mgl/K0L2q/s1/jay-leno-2017-ford-gt.jpg');
