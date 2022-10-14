@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
+<a class="celeb_back" href="{% url 'celebrity_detail' car.celebrity.pk %}">Back to Celebrity</a>
+<p></p>
 <div class="car">
     <div class="car_info">
         <img class="car_img" src={{car.img}} alt={{car.name}} />
@@ -47,7 +48,7 @@
 {% if user.is_authenticated %}
 {% if car.id > 38 %}
 <div>
-    <a class="delete_car_button" href="{% url 'car_delete' car.pk %}">Delete</a>
+    <a class="delete_car_button" href="{% url 'car_delete' car.pk %}">Delete Car</a>
 </div>
 {% endif %}
 {% endif %}
