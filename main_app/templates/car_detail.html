@@ -39,12 +39,16 @@
     </div>
     
 </div>
+{% if user.is_authenticated %}
 <div>
     <a class="update_car_button" href="/cars/{{car.id}}/update/">Update Car</a>
 </div>
+{% endif %}
+{% if user.is_authenticated %}
 {% if car.id > 38 %}
 <div>
     <a class="delete_car_button" href="{% url 'car_delete' car.pk %}">Delete</a>
 </div>
+{% endif %}
 {% endif %}
 {% endblock %}
