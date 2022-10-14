@@ -14,8 +14,10 @@
             {% endfor %}
         </div>
     </div>
+    {% if user.is_authenticated %}
     <footer>
         <a class="add_celeb" href="/new/">Add a Celebrity</a>
     </footer>
+    {% endif %}
 </div>
 {% endblock %}

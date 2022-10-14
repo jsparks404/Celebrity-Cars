@@ -6,6 +6,10 @@ from django.views import View
 from django.views.generic import DetailView
 from django.urls import reverse
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 # Create your views here.
 
@@ -42,6 +46,7 @@ class CarDetail(DetailView):
         return context
 
 
+@method_decorator(login_required, name='dispatch')
 class CelebrityCreate(CreateView):
     model = Celebrity
     fields = ['name', 'img', 'dob', 'job']
@@ -49,12 +54,14 @@ class CelebrityCreate(CreateView):
     success_url = "/celebrities/"
 
 
+@method_decorator(login_required, name='dispatch')
 class CelebrityDelete(DeleteView):
     model = Celebrity
     template_name = "celebrity_delete_confirmation.html"
     success_url = "/celebrities/"
 
 
+@method_decorator(login_required, name='dispatch')
 class CarCreate(View):
     def post(self, request, pk):
         year = request.POST.get('year')
@@ -73,6 +80,7 @@ class CarCreate(View):
         return redirect('celebrity_detail', pk=pk)
 
 
+@method_decorator(login_required, name='dispatch')
 class CarUpdate(UpdateView):
     model = Car
     fields = ['year', 'make', 'model', 'trim', 'displacement',
@@ -83,9 +91,26 @@ class CarUpdate(UpdateView):
         return reverse('car_detail', kwargs={'pk': self.object.pk, 'car_pk': self.object.celebrity.pk})
 
 
+@method_decorator(login_required, name='dispatch')
 class CarDelete(DeleteView):
     model = Car
     template_name = "car_delete_confirmation.html"
     def get_success_url(self):
         print(self.kwargs)
         return reverse('celebrity_detail', kwargs={'pk': self.object.celebrity.pk})
+
+
+class Signup(View):
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form": form}
+        return render(request, "registration/signup.html", context)
+    def post(self, request):
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("celebrity_list")
+        else:
+            context= {"form": form}
+            return render(request, "registration/signup.html", context)

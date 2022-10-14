@@ -8,11 +8,13 @@
         <h4>Profession: {{celebrity.job}}</h4>
     </div>
 </div>
+{% if user.is_authenticated %}
+{% if celebrity.id > 7%}
 <div>
-    {% if celebrity.id > 7%}
     <a class="celeb_delete" href="{% url 'celebrity_delete' celebrity.pk %}" class="button-is-danger"> Delete Celebrity </a>
-    {% endif %}
 </div>
+{% endif %}
+{% endif %}
 <div class="car_list">
     {% for car in celebrity.cars.all%}
     <a href="{% url 'car_detail' celebrity.pk car.pk %}">
@@ -36,6 +38,7 @@
 </div>
 <div>
     <h2>Add Car</h2>
+    {% if user.is_authenticated %}
     <p>If no info is available, put . in field</p>
     <form class="mb-5" action="{% url 'car_create' celebrity.pk %}" method="post">
         {% csrf_token %}
@@ -135,5 +138,9 @@
             </div>
         </div>
     </form>
+    {% else %}
+    <p>Must be logged in to add car</p>
+    {% endif %}
+
 </div>
 {% endblock %}

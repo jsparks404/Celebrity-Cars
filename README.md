@@ -28,3 +28,5 @@ arnold schwarzeneggar
  - celebrity create and delete, car create and delete, car specs update
 
  -make homepage a list of all cars, user auth,
+
+- make user profile that shows list of favorited cars
