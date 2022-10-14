@@ -4,6 +4,7 @@ body {
 }
 
 .nav {
+    position: relative;
     display: flex;
     background-color: black;
     height: 40px;
@@ -22,6 +23,34 @@ body {
     margin: 10px;
     color: gray;
 }
+
+.login_out {
+   
+
+}
+
+.signup_button {
+    color: gray;
+    
+    position: relative;
+    right: -640px;
+}
+
+.login_button {
+    color: gray;
+    
+    position: relative;
+    right: -650px;
+}
+
+.logout_button {
+    color: gray;
+    position: relative;
+    right: -700px;
+}
+
+
+
 
 a {
     text-decoration: none;
