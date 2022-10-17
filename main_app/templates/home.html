@@ -2,6 +2,7 @@
 {% block content %}
 <div class="home">
     <div class="home_list">
+        <h1 class="home_title">Celebrity Cars</h1>
         <div class="home_gallery">
             {% for car in cars %}
             <div class="home_cars">
@@ -10,8 +11,8 @@
             {% endfor %}
         </div>
     </div>
-    <footer>
-
+    <footer class="home_footer">
+        <a class="home_list_link" href="/celebrities/">Celebrity List</a>
     </footer>
 </div>
 {% endblock %}

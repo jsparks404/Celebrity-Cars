@@ -1,40 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="celeb_container">
-    <img class="detail_pic" src={{celebrity.img}} alt={{celebrity.name}} />
-    <div class="celeb_info">
-        <h3 class="name">{{celebrity.name}}</h3>
-        <h4>Born on {{celebrity.dob}}</h4>
-        <h4>Profession: {{celebrity.job}}</h4>
-    </div>
-</div>
-{% if user.is_authenticated %}
-{% if celebrity.id > 7%}
-<div>
-    <a class="celeb_delete" href="{% url 'celebrity_delete' celebrity.pk %}" class="button-is-danger"> Delete Celebrity </a>
-</div>
-{% endif %}
-{% endif %}
-<div class="car_list">
-    {% for car in celebrity.cars.all%}
-    <a href="{% url 'car_detail' celebrity.pk car.pk %}">
-        <div class="single_car">
-            <img class="car_pic" src={{car.img}} alt={{car.name}} />
-            <div class="car_list_title">
-                {% if car.year != '.' %}
-                <span class="space">{{car.year}} </span>
-                {% endif %}
-                <span class="space">{{car.make}}</span>
-                {% if car.model != '.' %}
-                <span class="space">{{car.model}}</span>
-                {% endif %}
-                {% if car.trim != '.' %}
-                <span class="space">{{car.trim}}</span>
-                {% endif %}
-            </div>
+<div class="celeb_box">
+    <div class="celeb_container">
+        <img class="detail_pic" src={{celebrity.img}} alt={{celebrity.name}} />
+        <div class="celeb_info">
+            <h3 class="name">{{celebrity.name}}</h3>
+            <h4>Born on {{celebrity.dob}}</h4>
+            <h4>Profession: {{celebrity.job}}</h4>
         </div>
-    </a>
-    {% endfor %}
+    </div>
+    {% if user.is_authenticated %}
+    {% if celebrity.id > 7%}
+    <div>
+        <a class="celeb_delete" href="{% url 'celebrity_delete' celebrity.pk %}" class="button-is-danger"> Delete Celebrity </a>
+    </div>
+    {% endif %}
+    {% endif %}
+    <div class="car_list">
+        {% for car in celebrity.cars.all%}
+        <a href="{% url 'car_detail' celebrity.pk car.pk %}">
+            <div class="single_car">
+                <img class="car_pic" src={{car.img}} alt={{car.name}} />
+                <div class="car_list_title">
+                    {% if car.year != '.' %}
+                    <span class="space">{{car.year}} </span>
+                    {% endif %}
+                    <span class="space">{{car.make}}</span>
+                    {% if car.model != '.' %}
+                    <span class="space">{{car.model}}</span>
+                    {% endif %}
+                    {% if car.trim != '.' %}
+                    <span class="space">{{car.trim}}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
 </div>
 <div>
     <h2>Add Car</h2>
